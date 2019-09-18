@@ -1,16 +1,20 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
 import './config/ReactotronConfig';
+import store from './store';
 
 import Header from './components/Header';
+import Counter from './components/Counter';
 
 import './App.css';
 
 function App() {
 	return (
-		<div>
+		<Provider store={store}>
 			<Header />
-		</div>
+			<Counter />
+		</Provider>
 	);
 }
 
